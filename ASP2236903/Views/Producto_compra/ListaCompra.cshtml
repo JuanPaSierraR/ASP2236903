@@ -1,9 +1,9 @@
-﻿@model IEnumerable<ASP2236903.Models.producto_compra>
+﻿@model IEnumerable<ASP2236903.Models.compra>
 
 <select class="form-control" id="id_fecha" name="id_fecha">
     @foreach (var item in Model)
     {
-        <option value="@item.id">@item.nombre</option>
+        <option value="@item.id">@item.fecha</option>
     }
 
 </select>
