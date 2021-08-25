@@ -132,6 +132,21 @@ namespace ASP2236903.Controllers
                 return PartialView(db.producto.ToList());
             }
         }
+        public static string NombreProdcuto(int idProducto)
+        {
+            using (var db = new invent2021Entities())
+            {
+                return db.producto.Find(idProducto).nombre;
+            }
+        }
+        public static string FechaCompra(int idCompra)
+        {
+            using (var db = new invent2021Entities())
+            {
+                return Convert.ToString(db.compra.Find(idCompra).fecha);
+            }
+        }
+
 
     }
 }

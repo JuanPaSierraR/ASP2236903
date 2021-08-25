@@ -4,14 +4,14 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalles</h2>
 
 <div>
-    <h4>producto_compra</h4>
+    <h4>Producto_compra</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.id_compra)
+            Fecha de compra
         </dt>
 
         <dd>
@@ -19,24 +19,24 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.id_producto)
+            Nombre producto
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.id_producto)
+            @ASP2236903.Controllers.Producto_compraController.NombreProdcuto(Model.id_producto)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.cantidad)
+           Cantidad
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.cantidad)
+            @ASP2236903.Controllers.Producto_compraController.FechaCompra(Model.id_compra)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Regresar", "Index")
 </p>

@@ -118,7 +118,7 @@ namespace ASP2236903.Controllers
 
             }
         }
-        public ActionResult ListaUsuario()
+        public ActionResult Listausuario()
         {
             using (var db = new invent2021Entities())
             {
