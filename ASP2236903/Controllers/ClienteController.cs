@@ -118,5 +118,29 @@ namespace ASP2236903.Controllers
 
             }
         }
+        public ActionResult Reporte()
+        {
+            try
+            {
+                var db = new invent2021Entities();
+                var query = from tabCompra in db.compra
+                            join tabCliente in db.cliente on tabCompra.id_cliente equals tabCliente.id
+                            select new Reporte
+                            {
+                                nombre = tabCliente.nombre,
+                                documentoCliente = tabCliente.documento,
+                                emailCliente = tabCliente.email,
+                                totalCompra = tabCompra.total,
+                                fechaCompra = tabCompra.fecha
+
+                            };
+                return View(query);
+
+            }catch(Exception ex)
+            {
+                ModelState.AddModelError("", "error " + ex);
+                return View();
+            }
+        }
     }
 }
