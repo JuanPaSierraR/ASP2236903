@@ -11,6 +11,7 @@ namespace ASP2236903.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class cliente
     {
@@ -20,9 +21,16 @@ namespace ASP2236903.Models
             this.compra = new HashSet<compra>();
         }
     
+        [Required]
         public int id { get; set; }
+
+        [Required]
         public string nombre { get; set; }
+
+        [Required]
         public string documento { get; set; }
+
+        [Required]
         public string email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

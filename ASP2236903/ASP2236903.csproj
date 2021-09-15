@@ -296,6 +296,8 @@
     <Content Include="Views\UsuarioRol\Listaroles.cshtml" />
     <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Views\Cliente\Reporte.cshtml" />
+    <Content Include="Views\Proveedor\uploadCsv.cshtml" />
+    <Content Include="Views\Cliente\uploadCsv.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

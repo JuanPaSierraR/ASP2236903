@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "uploadCsv";
+}
+
+<h2>Cargar CSV</h2>
+
+@using (Html.BeginForm("uploadCsv", "Proveedor", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        <label class="control-label col-md-2">Cargar CSV</label>
+        <div class="col-md-10">
+            <input type="file" name="file" class="form-control" required />
+        </div>
+    </div>
+
+    <div class="form-group">
+        
+        <div class="col-md-10">
+            <input type="submit" value="Enviar" />
+        </div>
+    </div>
+}
+

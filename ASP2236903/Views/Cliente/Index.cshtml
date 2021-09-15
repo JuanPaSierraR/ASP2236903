@@ -23,23 +23,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.documento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.email)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.id }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.documento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.id }) |
+                @Html.ActionLink("Borrar", "Delete", new { id = item.id })
+
+            </td>
+        </tr>
+    }
 
 </table>
+
+@Html.ActionLink("Cargar desde un archivo", "uploadCsv")
